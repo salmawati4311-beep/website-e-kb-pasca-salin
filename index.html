@@ -1,49 +1,252 @@
 <!DOCTYPE html>
-
 <html lang="id">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>E-KB PASCA SALIN | Sahabat Ibu</title>
-
 <style>
-
-:root{--pink:#df7195;--dark:#8e4265;--pale:#fff0f5;--cream:#fffaf5;--text:#493d42}
-
+:root{
+ --pink:#df7297;--dark:#8b3e61;--pale:#fff0f5;
+ --cream:#fffaf5;--text:#493b42;--border:#f0d8e2;
+}
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
-body{margin:0;background:var(--cream);color:var(--text);font-family:Arial,sans-serif;line-height:1.7}
-
-header{position:sticky;top:0;z-index:5;background:#fffaf5;border-bottom:1px solid #f1dce4}
-
-nav{max-width:1150px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-
-.logo{font-size:19px;font-weight:bold;color:var(--dark)}
-
-.links{display:flex;gap:14px;flex-wrap:wrap}
-
-.links a{font-size:13px;text-decoration:none;color:var(--dark);font-weight:bold}
-
+body{margin:0;background:var(--cream);color:var(--text);
+ font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+header{position:sticky;top:0;z-index:10;background:#fff8f9;
+ border-bottom:1px solid var(--border)}
+nav{max-width:1150px;margin:auto;padding:13px 20px;
+ display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-size:18px;font-weight:bold;color:var(--dark)}
+.links{display:flex;gap:13px;flex-wrap:wrap}
+.links a{font-size:13px;color:var(--dark);text-decoration:none;font-weight:bold}
 main{max-width:1150px;margin:auto;padding:22px 20px 50px}
-
-.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;background:linear-gradient(120deg,#ffe5ed,#fff2e5);border-radius:25px;overflow:hidden;padding:32px}
-
-.hero h1{font-size:clamp(30px,4vw,47px);line-height:1.15;color:var(--dark);margin:10px 0}
-
-.heroimg{width:100%;height:330px;object-fit:cover;border-radius:20px}
-
-.eyebrow{color:var(--dark);font-size:12px;font-weight:bold;letter-spacing:1px}
-
-h2{color:var(--dark);font-size:29px;line-height:1.3;margin:7px 0}
-
-h3{color:var(--dark);margin:0 0 7px}
-
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:25px;
+ align-items:center;background:linear-gradient(130deg,#ffe3ed,#fff0df);
+ padding:30px;border-radius:25px;overflow:hidden}
+.hero h1{font-size:clamp(30px,4vw,46px);line-height:1.15;
+ color:var(--dark);margin:10px 0}
+.hero img{width:100%;height:320px;object-fit:cover;border-radius:20px}
+.eyebrow{font-size:12px;font-weight:bold;letter-spacing:1px;color:var(--dark)}
+h2{font-size:29px;line-height:1.3;color:var(--dark);margin:8px 0}
+h3{font-size:18px;color:var(--dark);margin:0 0 8px}
 p{margin-top:0}
+.btn{display:inline-block;background:var(--pink);color:white;
+ border:0;border-radius:25px;padding:11px 18px;text-decoration:none;
+ font-weight:bold;cursor:pointer;margin:4px 3px 4px 0}
+.btn.alt{background:white;color:var(--dark);border:1px solid var(--pink)}
+.section{margin-top:45px}
+.lead{max-width:800px;color:#75666d;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card,.panel,.quiz{background:white;border:1px solid var(--border);
+ border-radius:17px;overflow:hidden;box-shadow:0 6px 22px #8d42600b}
+.card{display:flex;flex-direction:column;min-width:0}
+.card img{width:100%;height:185px;object-fit:cover;display:block;background:#f8e1e9}
+.body{padding:17px;display:flex;flex-direction:column;flex:1}
+.body p{font-size:14px;color:#75666d}
+.tag{align-self:flex-start;background:#fbe5ed;color:var(--dark);
+ padding:4px 10px;border-radius:20px;font-size:11px;font-weight:bold;margin-bottom:9px}
+details{margin-top:auto;border-top:1px solid var(--border);padding-top:11px}
+summary{cursor:pointer;color:var(--dark);font-weight:bold;font-size:13px}
+.detail{padding-top:10px;font-size:13px;color:#75666d}
+.detail strong{color:var(--text)}
+.panel{padding:22px}
+.panel ul{padding-left:20px}
+.panel li{margin-bottom:8px}
+.note{padding:15px 17px;background:#edf5ed;border-left:4px solid #76947a;
+ border-radius:0 12px 12px 0;margin-top:15px;font-size:14px}
+.warning{background:#fff0f4;border-color:var(--pink)}
+.quiz{padding:22px}
+.question{padding:15px 0;border-bottom:1px solid var(--border)}
+.question p{font-weight:bold}
+.question label{display:block;font-size:14px;margin:9px 0;cursor:pointer}
+#result{display:none;background:var(--pale);padding:15px;border-radius:12px;margin-top:15px}
+footer{text-align:center;background:#f8e6ed;padding:25px 15px;color:#75666d;font-size:13px}
+@media(max-width:760px){
+ nav{padding:12px}.links{gap:9px}.links a{font-size:12px}
+ main{padding:14px 12px 35px}
+ .hero{grid-template-columns:1fr;padding:20px}
+ .hero img{height:235px}
+ .grid,.two{grid-template-columns:1fr}
+ .card img{height:220px}
+ h2{font-size:25px}
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">🌷 E-KB PASCA SALIN</div>
+<div class="links">
+<a href="#beranda">Beranda</a><a href="#tentang">Tentang</a>
+<a href="#jenis">Jenis KB</a><a href="#menyusui">Ibu Menyusui</a><a href="#kuis">Kuis</a>
+</div>
+</nav>
+</header>
 
-.btn{display:inline-b
+<main>
+<section class="hero" id="beranda">
+<div>
+<span class="eyebrow">SAHABAT IBU SETELAH MELAHIRKAN</span>
+<h1>Kenali Pilihan KB, Rencanakan Masa Depan Keluarga</h1>
+<p>Media edukasi kontrasepsi setelah persalinan untuk membantu ibu memahami pilihan KB, termasuk hal yang perlu diketahui saat menyusui.</p>
+<a class="btn" href="#jenis">Jelajahi Jenis KB ↓</a>
+<a class="btn alt" href="#menyusui">Panduan Ibu Menyusui</a>
+</div>
+<img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1000&q=85"
+ alt="Keluarga bersama anak" onerror="this.alt='Foto keluarga';this.style.background='#f7dce6'">
+</section>
+
+<section class="section" id="tentang">
+<span class="eyebrow">KENALI LEBIH DEKAT</span>
+<h2>Tentang E-KB PASCA SALIN</h2>
+<p class="lead">Website edukasi digital untuk membantu ibu memahami pilihan kontrasepsi setelah melahirkan dan menyiapkan pertanyaan sebelum berkonsultasi dengan bidan atau dokter.</p>
+<div class="two">
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Pelayanan tenaga kesehatan">
+<div class="body"><h3>Informasi yang Mudah Dipahami</h3><p>Kenali cara kerja, manfaat, keterbatasan, dan kemungkinan efek samping metode KB.</p></div>
+</article>
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=800&q=80" alt="Ibu dan bayi">
+<div class="body"><h3>Dukungan untuk Ibu</h3><p>Pelajari hal yang perlu dipertimbangkan untuk KB setelah persalinan, termasuk ketika menyusui.</p></div>
+</article>
+</div>
+</section>
+
+<section class="section" id="jenis">
+<span class="eyebrow">KENALI PILIHANNYA</span>
+<h2>Jenis-Jenis Kontrasepsi</h2>
+<p class="lead">Setiap metode memiliki cara kerja dan pertimbangan berbeda. Buka penjelasan pada setiap kartu.</p>
+<div class="grid">
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" alt="Obat dalam kemasan">
+<div class="body"><span class="tag">Hormonal</span><h3>Pil KB</h3><p>Pil yang diminum sesuai jadwal. Jenis pil memiliki kandungan hormon berbeda.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Cara kerja:</strong> bergantung pada jenisnya, antara lain menghambat ovulasi atau mengentalkan lendir leher rahim.</p><p><strong>Kelebihan:</strong> tidak memerlukan pemasangan alat.</p><p><strong>Pertimbangan:</strong> perlu diminum sesuai aturan. Pil kombinasi yang mengandung estrogen tidak sesuai untuk semua ibu setelah melahirkan.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=800&q=80" alt="Peralatan medis">
+<div class="body"><span class="tag">Hormonal</span><h3>Suntik KB 1 Bulan</h3><p>Suntikan kontrasepsi yang umumnya mengandung kombinasi hormon.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Cara kerja:</strong> mencegah ovulasi dan mengubah lendir leher rahim.</p><p><strong>Kelebihan:</strong> tidak perlu minum pil setiap hari.</p><p><strong>Pertimbangan:</strong> kandungan estrogen membuat metode ini tidak selalu sesuai untuk ibu menyusui, terutama pada awal pascapersalinan. Konsultasikan waktu mulai dengan tenaga kesehatan.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=800&q=80" alt="Perlengkapan kesehatan">
+<div class="body"><span class="tag">Hormonal</span><h3>Suntik KB 3 Bulan</h3><p>Suntikan yang umumnya mengandung hormon progestin dan diulang sesuai jadwal.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Cara kerja:</strong> terutama menghambat ovulasi dan mengentalkan lendir leher rahim.</p><p><strong>Kelebihan:</strong> tidak perlu digunakan setiap hari.</p><p><strong>Pertimbangan:</strong> dapat mengubah pola menstruasi, misalnya bercak atau tidak menstruasi. Kembalinya kesuburan setelah dihentikan bisa memerlukan waktu.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Layanan kesehatan">
+<div class="body"><span class="tag">Jangka panjang</span><h3>Implan</h3><p>Batang kecil yang dipasang di bawah kulit lengan oleh tenaga kesehatan terlatih.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Cara kerja:</strong> melepaskan hormon progestin untuk mencegah kehamilan.</p><p><strong>Kelebihan:</strong> sangat efektif dan tidak perlu diingat setiap hari.</p><p><strong>Pertimbangan:</strong> pemasangan dan pelepasan memerlukan tenaga kesehatan. Perubahan pola perdarahan dapat terjadi.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1583912086096-8c7e9f1e6c19?auto=format&fit=crop&w=800&q=80" alt="Alat medis untuk edukasi">
+<div class="body"><span class="tag">Jangka panjang</span><h3>IUD / AKDR</h3><p>Alat kontrasepsi kecil yang ditempatkan di dalam rahim oleh tenaga kesehatan.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Jenis:</strong> IUD tembaga tanpa hormon dan IUD hormonal.</p><p><strong>Kelebihan:</strong> efektif untuk jangka panjang.</p><p><strong>Pertimbangan:</strong> waktu pemasangan setelah persalinan perlu dinilai tenaga kesehatan. IUD tembaga dapat membuat menstruasi lebih banyak atau nyeri pada sebagian pengguna.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=800&q=80" alt="Peralatan kesehatan">
+<div class="body"><span class="tag">Penghalang</span><h3>Kondom</h3><p>Alat penghalang yang digunakan saat berhubungan seksual.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Cara kerja:</strong> membantu mencegah sperma masuk ke saluran reproduksi.</p><p><strong>Kelebihan:</strong> tidak mengandung hormon dan membantu mengurangi risiko infeksi menular seksual.</p><p><strong>Pertimbangan:</strong> harus digunakan dengan benar setiap kali berhubungan seksual.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80" alt="Kalender">
+<div class="body"><span class="tag">Metode perilaku</span><h3>Metode Kalender</h3><p>Memperkirakan masa subur berdasarkan pola siklus menstruasi.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Cara kerja:</strong> menghindari hubungan seksual atau menggunakan metode penghalang pada hari subur.</p><p><strong>Pertimbangan:</strong> siklus setelah melahirkan dapat belum teratur. Ovulasi dapat terjadi sebelum menstruasi pertama kembali.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=800&q=80" alt="Ibu dan bayi">
+<div class="body"><span class="tag">Sementara</span><h3>Metode Amenore Laktasi (MAL)</h3><p>Metode yang memanfaatkan kondisi menyusui dengan tiga syarat khusus.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Syarat:</strong> bayi berusia kurang dari 6 bulan, menstruasi belum kembali, dan bayi menyusu penuh atau hampir penuh siang dan malam.</p><p><strong>Penting:</strong> ketiga syarat harus terpenuhi sekaligus. Jika salah satu tidak terpenuhi, diskusikan metode lain dengan bidan.</p></div></details></div>
+</article>
+
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Konsultasi kesehatan">
+<div class="body"><span class="tag">Permanen</span><h3>Kontrasepsi Mantap</h3><p>Metode permanen bagi orang yang yakin tidak ingin memiliki anak lagi.</p>
+<details><summary>Pelajari lebih lanjut</summary><div class="detail"><p><strong>Jenis:</strong> tubektomi untuk perempuan dan vasektomi untuk laki-laki.</p><p><strong>Pertimbangan:</strong> memerlukan konseling matang, keputusan sukarela, dan tindakan oleh tenaga kesehatan berwenang.</p></div></details></div>
+</article>
+</div>
+</section>
+
+<section class="section" id="menyusui">
+<span class="eyebrow">PANDUAN KHUSUS</span>
+<h2>KB untuk Ibu Menyusui</h2>
+<p class="lead">Tidak semua metode memiliki pertimbangan yang sama selama menyusui. Waktu mulai juga bergantung pada kondisi ibu dan berapa lama sejak persalinan.</p>
+<div class="two">
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=900&q=80" alt="Ibu bersama bayi">
+<div class="body"><h3>Metode yang dapat dipertimbangkan</h3><p>Pil progestin saja, suntik progestin 3 bulan, implan, IUD tembaga, IUD hormonal, dan kondom dapat menjadi pilihan bagi sebagian ibu menyusui sesuai waktu serta kondisi kesehatan.</p></div>
+</article>
+<article class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" alt="Konsultasi dengan tenaga kesehatan">
+<div class="body"><h3>Diskusikan sebelum memilih</h3><p>Tanyakan kapan metode dapat dimulai, pengaruhnya terhadap menyusui, efek samping, dan jadwal kunjungan ulang. Tenaga kesehatan akan membantu menilai pilihan yang sesuai.</p></div>
+</article>
+</div>
+<div class="panel" style="margin-top:18px">
+<h3>Bagaimana dengan MAL?</h3>
+<p>MAL hanya dapat diandalkan jika semua syarat berikut terpenuhi bersamaan:</p>
+<ul>
+<li>Bayi berusia kurang dari 6 bulan.</li>
+<li>Menstruasi ibu belum kembali.</li>
+<li>Bayi menyusu penuh atau hampir penuh, siang dan malam.</li>
+</ul>
+<p>Jika salah satu syarat tidak terpenuhi, diskusikan kontrasepsi lain dengan bidan.</p>
+</div>
+<div class="note"><strong>Ingat:</strong> menyusui tidak selalu mencegah kehamilan. Ovulasi dapat terjadi sebelum menstruasi pertama kembali.</div>
+<div class="note warning"><strong>Penting:</strong> informasi ini untuk edukasi, bukan diagnosis atau rekomendasi otomatis. Pilihan KB harus mempertimbangkan kondisi individual dan pedoman yang berlaku bersama bidan atau dokter.</div>
+</section>
+
+<section class="section" id="kuis">
+<span class="eyebrow">UJI PENGETAHUAN</span>
+<h2>Kuis Singkat KB Pascasalin</h2>
+<p class="lead">Pilih jawaban yang menurut kamu benar, lalu tekan Lihat Hasil.</p>
+<div class="quiz">
+<form id="quizform">
+<div class="question"><p>1. Siapa yang dapat membantu ibu memilih KB sesuai kondisi kesehatan?</p>
+<label><input type="radio" name="q1" value="0" required> Memilih tanpa mencari informasi</label>
+<label><input type="radio" name="q1" value="1"> Bidan atau tenaga kesehatan</label></div>
+<div class="question"><p>2. Berapa syarat MAL yang harus terpenuhi?</p>
+<label><input type="radio" name="q2" value="0" required> Cukup satu syarat</label>
+<label><input type="radio" name="q2" value="1"> Ketiga syarat harus terpenuhi bersamaan</label></div>
+<div class="question"><p>3. Apakah menyusui selalu mencegah kehamilan?</p>
+<label><input type="radio" name="q3" value="1" required> Tidak, MAL memiliki persyaratan khusus</label>
+<label><input type="radio" name="q3" value="0"> Ya, selama masih menyusui</label></div>
+<button class="btn" type="submit">Lihat Hasil</button>
+<button class="btn alt" type="reset">Ulangi Kuis</button>
+</form>
+<div id="result" aria-live="polite"></div>
+</div>
+</section>
+</main>
+
+<footer>
+<strong>🌷 E-KB PASCA SALIN</strong><br>
+Media edukasi kontrasepsi setelah persalinan.<br>
+Jadikan informasi ini pendamping diskusi dengan bidan atau dokter.
+</footer>
+
+<script>
+document.getElementById("quizform").addEventListener("submit",function(e){
+ e.preventDefault();
+ const data=new FormData(this);
+ let score=0;
+ ["q1","q2","q3"].forEach(function(q){if(data.get(q)==="1")score++;});
+ const result=document.getElementById("result");
+ result.style.display="block";
+ result.innerHTML="<strong>Nilai kamu: "+score+" dari 3 jawaban benar.</strong><br>"+
+ (score===3?"Bagus! Kamu memahami dasar informasi KB pascasalin.":"Terima kasih sudah mencoba. Baca kembali materi dan diskusikan pertanyaan dengan bidan.");
+});
+document.getElementById("quizform").addEventListener("reset",function(){
+ document.getElementById("result").style.display="none";
+});
+</script>
+</body>
+</html>
