@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-KB PASCA SALIN | Sahabat Ibu</title>
+
+<style>
+:root {
+  --pink: #e982a3;
+  --pink-light: #fff0f5;
+  --purple: #8873c9;
+  --purple-light: #f1edff;
+  --green: #609b80;
+  --green-light: #eaf7ef;
+  --text: #403b50;
+  --white: #ffffff;
+  --background: #fffafc;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.7;
+}
+
+header {
+  background: white;
+  padding: 15px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 15px #00000008;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--pink);
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+section {
+  padding: 55px 7%;
+  scroll-margin-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fff0f5, #f1edff);
+  text-align: center;
+  padding: 75px 7%;
+}
+
+.hero .emoji {
+  font-size: 65px;
+}
+
+h1 {
+  color: var(--purple);
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.3;
+}
+
+h2 {
+  color: var(--purple);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+h3 {
+  color: var(--purple);
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 25px;
+  background: var(--pink);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button-purple {
+  background: var(--purple);
+}
+
+.button-green {
+  background: var(--green);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 23px;
+  box-shadow: 0 5px 20px #8873c914;
+  border: 1px solid #f4eaf3;
+}
+
+.card .icon {
+  font-size: 42px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.soft-pink {
+  background: var(--pink-light);
+}
+
+.soft-purple {
+  background: var(--purple-light);
+}
+
+.soft-green {
+  background: var(--green-light);
+}
+
+.notice {
+  padding: 18px;
+  background: #fff8e8;
+  border-left: 5px solid #e9bd65;
+  border-radius: 10px;
+  margin: 22px 0;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+details {
+  background: white;
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin: 12px 0;
+  box-shadow: 0 3px 12px #00000008;
+}
+
+summary {
+  color: var(--purple);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dfd5eb;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  background: white;
+}
+
+#hasil {
+  display: none;
+  padding: 20px;
+  background: var(--green-light);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+footer {
+  background: var(--purple-light);
+  padding: 30px 7%;
+  text-align: center;
+  font-size: 13px;
+}
+
+.small {
+  font-size: 13px;
+  color: #6c657b;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  section {
+    padding: 40px 6%;
+  }
+
+  .hero {
+    padding: 50px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🌸 E-KB <span>PASCA SALIN</span></div>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#jenis">Jenis KB</a>
+    <a href="#menyusui">Ibu Menyusui</a>
+    <a href="#efeksamping">Efek Samping</a>
+    <a href="#bantuan">Bantuan</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="beranda">
+  <div class="emoji">🤱🏻🌷</div>
+
+  <h1>Sahabat Ibu,<br>Kenali Pilihan KB Setelah Melahirkan</h1>
+
+  <p>
+    Selamat datang di E-KB PASCA SALIN!
+    Website edukasi yang membantu Ibu memahami pilihan
+    kontrasepsi setelah melahirkan dengan informasi
+    yang sederhana, nyaman, dan mudah dipahami.
+  </p>
+
+  <a href="#jenis" class="button">🌸 Mulai Belajar KB</a>
+
+  <a href="#menyusui" class="button button-purple">
+    🤱 KB untuk Ibu Menyusui
+  </a>
+
+  <a href="#bantuan" class="button button-green">
+    💗 Bantu Saya Memahami KB
+  </a>
+</section>
+
+<section id="tentang">
+  <h2>🌷 Mengenal E-KB PASCA SALIN</h2>
+
+  <p class="subtitle">
+    Setelah melahirkan, Ibu berhak memperoleh informasi
+    yang benar mengenai keluarga berencana. Yuk, belajar
+    bersama agar Ibu dapat berdiskusi dengan bidan
+    mengenai metode kontrasepsi yang sesuai dengan kebutuhan.
+  </p>
+
+  <div class="grid">
+    <div class="card soft-pink">
+      <div class="icon">📚</div>
+      <h3>Edukasi KB</h3>
+      <p>
+        Mengenal berbagai metode kontrasepsi,
+        cara kerja, kelebihan, dan keterbatasannya.
+      </p>
+    </div>
+
+    <div class="card soft-purple">
+      <div class="icon">🤱</div>
+      <h3>Informasi Menyusui</h3>
+      <p>
+        Memahami hal-hal yang perlu diperhatikan
+        ketika memilih KB selama menyusui.
+      </p>
+    </div>
+
+    <div class="card soft-green">
+      <div class="icon">💬</div>
+      <h3>Pendampingan Informasi</h3>
+      <p>
+        Membantu Ibu mengenali kebutuhan dan
+        pertanyaan yang dapat didiskusikan bersama bidan.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="jenis" class="soft-pink">
+  <h2>🌸 Kenali Jenis-Jenis Kontrasepsi</h2>
+
+  <p class="subtitle">
+    Setiap metode memiliki cara kerja, manfaat,
+    dan pertimbangan yang berbeda. Klik setiap kartu
+    untuk membaca penjelasannya.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">💉</div>
+      <h3>KB Suntik</h3>
+      <p>
+        Kontrasepsi hormonal yang diberikan melalui suntikan
+        sesuai jadwal, misalnya setiap satu atau tiga bulan,
+        bergantung pada jenisnya.
+      </p>
+      <details>
+        <summary>Pelajari lebih lanjut</summary>
+        <p>
+          Suntik KB bekerja dengan hormon untuk mencegah
+          kehamilan. Perubahan pola menstruasi dapat terjadi.
+          Jenis yang mengandung progestin dapat menjadi pilihan
+          pada masa menyusui dengan mempertimbangkan waktu
+          penggunaan dan kondisi Ibu.
+        </p>
+        <p>
+          Tanyakan kepada bidan mengenai jenis suntikan,
+          waktu memulai, dan jadwal suntikan berikutnya.
+        </p>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="icon">📍</div>
+      <h3>Implan</h3>
+      <p>
+        Batang kecil yang dipasang di bawah kulit lengan
+        untuk melepaskan hormon pencegah kehamilan.
+      </p>
+      <details>
+        <summary>Pelajari lebih lanjut</summary>
+        <p>
+          Implan merupakan kontrasepsi jangka panjang
+          yang dapat dilepas oleh tenaga kesehatan
+          terlatih jika Ibu ingin menghentikan penggunaannya.
+        </p>
+        <p>
+          Perubahan pola perdarahan atau menstruasi
+          dapat terjadi. Implan progestin umumnya dapat
+          digunakan selama menyusui sesuai penilaian
+          tenaga kesehatan.
+        </p>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌀</div>
+      <h3>AKDR atau IUD</h3>
+      <p>
+        Alat kontrasepsi berbentuk kecil yang dipasang
+        di dalam rahim oleh tenaga kesehatan.
+      </p>
+      <details>
+        <summary>Pelajari lebih lanjut</summary>
+        <p>
+          IUD tembaga tidak mengandung hormon,
+          sedangkan IUD hormonal melepaskan hormon
+          progestin. Keduanya merupakan metode jangka panjang.
+        </p>
+        <p>
+          IUD dapat dipertimbangkan setelah persalinan,
+          termasuk pada ibu menyusui. Waktu pemasangan
+          dan risiko pengeluaran alat perlu dijelaskan
+          oleh tenaga kesehatan.
+        </p>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="icon">💊</div>
+      <h3>KB Pil</h3>
+      <p>
+        Kontrasepsi berbentuk tablet yang diminum
+        sesuai petunjuk dan jadwal.
+      </p>
+      <details>
+        <summary>Pelajari lebih lanjut</summary>
+        <p>
+          Pil KB terdiri dari beberapa jenis.
+          Pil progestin saja berbeda dari pil kombinasi
+          yang mengandung estrogen dan progestin.
+        </p>
+        <p>
+          Pil progestin saja umumnya dapat digunakan
+          saat menyusui. Waktu penggunaan dan kesesuaian
+          pil perlu dikonsultasikan dengan bidan atau dokter.
+        </p>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛡️</div>
+      <h3>Kondom</h3>
+      <p>
+        Metode penghalang yang digunakan saat berhubungan
+        seksual untuk membantu mencegah kehamilan.
+      </p>
+      <details>
+        <summary>Pelajari lebih lanjut</summary>
+        <p>
+          Kondom tidak mengandung hormon dan digunakan
+          setiap kali berhubungan seksual. Kondom juga
+          membantu mengurangi risiko penularan infeksi
+          menular seksual.
+        </p>
+        <p>
+          Gunakan dengan benar dan periksa tanggal
+          kedaluwarsa sebelum pemakaian.
+        </p>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌼</div>
+      <h3>Metode Amenore Laktasi</h3>
+      <p>
+        Metode sementara yang memanfaatkan kondisi
+        menyusui dengan kriteria tertentu.
+      </p>
+      <details>
+        <summary>Pelajari lebih lanjut</summary>
+        <p>
+          Metode ini hanya dapat diandalkan jika ketiga
+          kriteria terpenuhi: bayi berusia kurang dari
+          enam bulan, menstruasi belum kembali, dan
+          menyusui secara eksklusif atau hampir eksklusif
+          dengan pola menyusui yang sesuai.
+        </p>
+        <p>
+          Jika salah satu kriteria tidak terpenuhi,
+          Ibu perlu mempertimbangkan metode kontrasepsi lain.
+          Diskusikan dengan bidan.
+        </p>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌷</div>
+      <h3>Metode Kontrasepsi Lain</h3>
+      <p>
+        Terdapat pilihan lain yang dapat dipelajari
+        sesuai kebutuhan dan kondisi kesehatan Ibu.
+      </p>
+      <details>
+        <summary>Pelajari lebih lanjut</summary>
+        <p>
+          Kontrasepsi permanen, seperti tubektomi,
+          merupakan pilihan bagi orang yang tidak
+          menginginkan kehamilan lagi. Keputusan harus
+          dibuat secara sukarela setelah memperoleh
+          konseling yang memadai.
+        </p>
+        <p>
+          Tanyakan kepada tenaga kesehatan mengenai
+          semua pilihan yang tersedia.
+        </p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<section id="menyusui">
+  <h2>🤱 KB untuk Ibu Menyusui</h2>
+
+  <p class="subtitle">
+    Ibu menyusui tetap dapat menggunakan kontrasepsi.
+    Pemilihan metode perlu memperhatikan kondisi Ibu,
+    usia bayi, pola menyusui, dan waktu setelah persalinan.
+  </p>
+
+  <div class="grid">
+
+    <div class="card soft-green">
+      <div class="icon">🌿</div>
+      <h3>Pil Progestin</h3>
+      <p>
+        Umumnya dapat digunakan saat menyusui.
+        Kepatuhan terhadap jadwal minum penting
+        untuk menjaga efektivitasnya.
+      </p>
+    </div>
+
+    <div class="card soft-purple">
+      <div class="icon">📍</div>
+      <h3>Implan</h3>
+      <p>
+        Kontrasepsi jangka panjang yang umumnya
+        sesuai untuk ibu menyusui setelah
+        mempertimbangkan waktu pemasangan.
+      </p>
+    </div>
+
+    <div class="card soft-pink">
+      <div class="icon">🌀</div>
+      <h3>IUD</h3>
+      <p>
+        Pilihan kontrasepsi jangka panjang.
+        Waktu pemasangan setelah melahirkan
+        perlu dinilai oleh tenaga kesehatan.
+      </p>
+    </div>
+
+    <div class="card soft-green">
+      <div class="icon">🛡️</div>
+      <h3>Kondom</h3>
+      <p>
+        Tidak mengandung hormon dan dapat digunakan
+        selama menyusui.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    <strong>💡 Hal penting untuk Ibu:</strong>
+    <p>
+      Tidak semua metode memiliki aturan penggunaan
+      yang sama setelah persalinan. Metode yang
+      mengandung estrogen, termasuk pil kombinasi,
+      memiliki pembatasan waktu tertentu setelah
+      melahirkan karena risiko pembekuan darah dan
+      pertimbangan menyusui.
+    </p>
+    <p>
+      Jangan menentukan metode hanya berdasarkan
+      informasi website. Konsultasikan pilihan Ibu
+      dengan bidan atau dokter.
+    </p>
+  </div>
+</section>
+
+<section id="efeksamping" class="soft-purple">
+  <h2>💗 Mengenal Efek Samping KB</h2>
+
+  <p class="subtitle">
+    Setiap metode kontrasepsi dapat menimbulkan
+    efek samping yang berbeda. Mengenalinya membantu
+    Ibu mengetahui kapan perlu berkonsultasi.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🩸</div>
+      <h3>Perubahan Menstruasi</h3>
+      <p>
+        Menstruasi dapat menjadi tidak teratur,
+        lebih sedikit, lebih banyak, atau tidak
+        menstruasi, bergantung pada metode yang digunakan.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚖️</div>
+      <h3>Perubahan Berat Badan</h3>
+      <p>
+        Sebagian pengguna dapat mengalami perubahan
+        berat badan. Penyebabnya dapat beragam dan
+        tidak selalu berasal dari kontrasepsi.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌸</div>
+      <h3>Keluhan Lain</h3>
+      <p>
+        Keluhan dapat berupa sakit kepala, nyeri
+        payudara, atau keluhan lain, bergantung
+        pada jenis kontrasepsi dan kondisi pengguna.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    <strong>⚠️ Kapan perlu mencari pertolongan?</strong>
+    <p>
+      Segera cari pertolongan medis jika mengalami
+      perdarahan sangat banyak, nyeri perut hebat,
+      sesak napas, nyeri dada, atau gejala berat lainnya.
+      Jangan menganggap semua keluhan sebagai efek
+      samping KB yang normal.
+    </p>
+  </div>
+</section>
+
+<section id="bantuan">
+  <h2>💬 Bantu Saya Memahami Pilihan KB</h2>
+
+  <p class="subtitle">
+    Jawab pertanyaan berikut untuk membantu mengenali
+    informasi yang ingin Ibu pelajari. Bagian ini
+    bukan alat diagnosis dan tidak menetapkan metode
+    kontrasepsi secara otomatis.
+  </p>
+
+  <div class="card">
+
+    <label for="usiaBayi">
+      1. Berapa usia bayi Ibu saat ini?
+    </label>
+
+    <select id="usiaBayi">
+      <option value="">Pilih jawaban</option>
+      <option value="0-6">Kurang dari 6 bulan</option>
+      <option value="6-12">6–12 bulan</option>
+      <option value="12+">Lebih dari 12 bulan</option>
+    </select>
+
+    <label for="menyusui">
+      2. Apakah Ibu sedang menyusui?
+    </label>
+
+    <select id="menyusui">
+      <option value="">Pilih jawaban</option>
+      <option value="eksklusif">Ya, menyusui eksklusif</option>
+      <option value="campuran">Ya, menyusui dan memberi tambahan</option>
+      <option value="tidak">Tidak menyusui</option>
+    </select>
+
+    <label for="tujuan">
+      3. Informasi apa yang ingin Ibu ketahui?
+    </label>
+
+    <select id="tujuan">
+      <option value="">Pilih jawaban</option>
+      <option value="jangka-panjang">
+        Kontrasepsi jangka panjang
+      </option>
+      <option value="hormonal">
+        Kontrasepsi hormonal
+      </option>
+      <option value="non-hormonal">
+        Kontrasepsi nonhormonal
+      </option>
+      <option value="efek-samping">
+        Efek samping kontrasepsi
+      </option>
+      <option value="menyusui">
+        Kontrasepsi selama menyusui
+      </option>
+    </select>
+
+    <label for="pertanyaan">
+      4. Pertanyaan atau kekhawatiran Ibu (opsional)
+    </label>
+
+    <textarea id="pertanyaan" rows="3"
+      placeholder="Contoh: Saya ingin mengetahui efek samping KB suntik.">
+    </
+      </textarea>
+
+    <button class="button button-purple" onclick="tampilkanHasil()">
+      Lihat Ringkasan Kebutuhan Saya 💗
+    </button>
+
+    <div id="hasil" aria-live="polite"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>E-KB PASCA SALIN</strong></p>
+  <p>Kenali Pilihan KB, Lebih Siap Setelah Melahirkan.</p>
+  <p class="small">
+    Informasi ini merupakan media edukasi dan bukan pengganti
+    konsultasi dengan bidan atau dokter.
+  </p>
+</footer>
+
+<script>
+function tampilkanHasil() {
+  const usiaBayi = document.getElementById("usiaBayi").value;
+  const menyusui = document.getElementById("menyusui").value;
+  const tujuan = document.getElementById("tujuan").value;
+  const pertanyaan = document.getElementById("pertanyaan").value.trim();
+  const hasil = document.getElementById("hasil");
+
+  if (!usiaBayi || !menyusui || !tujuan) {
+    alert("Silakan isi tiga pertanyaan wajib terlebih dahulu, ya, Ibu.");
+    return;
+  }
+
+  hasil.replaceChildren();
+
+  const judul = document.createElement("h3");
+  judul.textContent = "🌷 Ringkasan Kebutuhan Informasi Ibu";
+  hasil.appendChild(judul);
+
+  const jawaban = [
+    ["Usia bayi", document.getElementById("usiaBayi").selectedOptions[0].text],
+    ["Kondisi menyusui", document.getElementById("menyusui").selectedOptions[0].text],
+    ["Informasi yang ingin diketahui", document.getElementById("tujuan").selectedOptions[0].text],
+    ["Pertanyaan Ibu", pertanyaan || "Tidak diisi"]
+  ];
+
+  jawaban.forEach(function(item) {
+    const p = document.createElement("p");
+    const strong = document.createElement("strong");
+    strong.textContent = item[0] + ": ";
+    p.appendChild(strong);
+    p.appendChild(document.createTextNode(item[1]));
+    hasil.appendChild(p);
+  });
+
+  const pesan = document.createElement("p");
+  pesan.textContent =
+    "Ringkasan ini membantu Ibu mengenali kebutuhan informasi, bukan menentukan metode KB secara otomatis. Silakan diskusikan pilihan kontrasepsi bersama bidan atau dokter.";
+  hasil.appendChild(pesan);
+
+  hasil.style.display = "block";
+  hasil.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
