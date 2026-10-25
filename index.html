@@ -7,229 +7,483 @@
 <title>E-KB PASCA SALIN | Sahabat Bunda</title>
 
 <style>
-:root{
-  --pink:#c85f88;
-  --dark:#a4446b;
-  --soft:#f9e5ee;
-  --cream:#fffaf6;
-  --lavender:#f2edfb;
-  --text:#493b47;
-  --muted:#786875;
-  --white:#fff;
-  --shadow:0 10px 28px rgba(119,60,88,.09);
+:root {
+  --pink: #c85f88;
+  --dark: #a4446b;
+  --soft: #f9e5ee;
+  --cream: #fffaf6;
+  --lavender: #f2edfb;
+  --text: #493b47;
+  --muted: #786875;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{
-  margin:0;
-  background:var(--cream);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.7;
-  overflow-x:hidden;
-}
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  flex-wrap:wrap;
-  padding:13px 5%;
-  background:white;
-  position:sticky;
-  top:0;
-  z-index:10;
-  box-shadow:0 4px 18px #68425812;
-}
-.brand{display:flex;align-items:center;gap:10px}
-.logo{
-  width:53px;height:53px;border-radius:17px;
-  background:var(--soft);
-  display:grid;place-items:center;flex-shrink:0;
-}
-.brand-name{font-size:17px;font-weight:800;color:var(--dark);line-height:1.3}
-.brand-sub{font-size:10px;letter-spacing:2px;color:#786273;font-weight:bold}
-nav{display:flex;gap:13px;flex-wrap:wrap}
-nav a{font-size:12px;font-weight:bold;text-decoration:none;color:var(--text)}
-nav a:hover{color:var(--pink)}
-section{padding:58px 7%;scroll-margin-top:90px;min-width:0}
-h1,h2,h3{line-height:1.3}
-h1{font-size:clamp(34px,5vw,54px);color:var(--dark);margin:12px 0}
-h2{font-size:clamp(25px,3vw,34px);color:var(--dark);margin:0 0 12px}
-h3{color:var(--dark);margin:8px 0}
-p{margin:8px 0 15px;overflow-wrap:break-word}
-.eyebrow{font-size:11px;letter-spacing:2px;color:var(--dark);font-weight:bold}
-.hero{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-  align-items:center;
-  background:linear-gradient(120deg,#fff0f6,#f4effb);
-}
-.hero-img{
-  width:100%;height:360px;object-fit:cover;
-  border-radius:27px;
-  box-shadow:var(--shadow);
-  background:#f7dfe9;
-}
-.btn{
-  display:inline-block;
-  padding:12px 20px;
-  border:0;border-radius:28px;
-  background:var(--pink);
-  color:white;font-weight:bold;font-size:14px;
-  text-decoration:none;cursor:pointer;
-  margin:5px 5px 5px 0;
-}
-.btn:hover{filter:brightness(.95)}
-.btn.light{background:white;color:var(--dark);border:1px solid #efcada}
-.center{text-align:center}
-.intro{
-  max-width:730px;
-  margin:0 auto 30px;
-  text-align:center;
-  color:var(--muted);
-  overflow-wrap:break-word;
-}
-.soft{background:#fff0f6}
-.lilac{background:var(--lavender)}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{
-  min-width:0;background:white;
-  border:1px solid #f1dfe7;
-  border-radius:21px;overflow:hidden;
-  box-shadow:var(--shadow);
-}
-.card img{
-  width:100%;height:195px;
-  object-fit:cover;display:block;background:#f9e5ee;
-}
-.card-body{padding:18px;min-width:0}
-.card p{font-size:14px;color:var(--muted)}
-.tag{
-  display:inline-block;background:var(--soft);
-  color:var(--dark);padding:4px 10px;
-  border-radius:20px;font-size:11px;font-weight:bold;
-}
-.detail{display:none;border-top:1px solid #f0dce5;margin-top:12px;padding-top:10px}
-.detail.open{display:block}
-.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
-.info{min-width:0;background:white;padding:22px;border-radius:19px;box-shadow:var(--shadow)}
-.info p{font-size:14px;color:var(--muted)}
-.symbol{font-size:25px}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:25px}
-.stat{min-width:0;background:white;padding:18px;text-align:center;border-radius:17px;box-shadow:var(--shadow)}
-.stat strong{display:block;color:var(--dark)}
-.stat span{font-size:12px;color:var(--muted)}
-.callout{
-  background:white;border-left:5px solid var(--pink);
-  padding:18px 21px;border-radius:12px;margin-top:22px;
-  overflow-wrap:break-word;
-}
-form{width:100%;max-width:820px;margin:0 auto;min-width:0}
-fieldset{
-  width:100%;min-width:0;max-width:100%;
-  border:1px solid #efd5e1;
-  border-radius:17px;background:white;
-  padding:18px;margin:17px 0;
-}
-legend{font-weight:bold;color:var(--dark);padding:0 8px;white-space:normal}
-label{display:block;margin:10px 0;cursor:pointer;overflow-wrap:break-word}
-input[type=radio],input[type=checkbox]{accent-color:var(--pink);margin-right:8px}
-textarea{
-  display:block;width:100%;max-width:100%;min-width:0;
-  min-height:95px;padding:12px;
-  border:1px solid #e8cbd8;border-radius:12px;font:inherit;
-}
-.result{
-  display:none;background:white;border:1px solid #ecc9d9;
-  border-radius:16px;padding:18px;margin-top:18px;
-  overflow-wrap:anywhere;max-width:100%;
-}
-footer{background:#493847;color:white;text-align:center;padding:32px 7%}
-footer p{font-size:13px;color:#f5e7ee}
 
-/* Perbaikan khusus bagian Pilihan Bunda */
-#pilihan{
-  width:100%;
-  min-width:0;
-  overflow-x:clip;
+* {
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 13px 5%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 18px #68425812;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 53px;
+  height: 53px;
+  border-radius: 17px;
+  background: var(--soft);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.brand-sub {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #786273;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+section {
+  padding: 58px 7%;
+  scroll-margin-top: 90px;
+  min-width: 0;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(34px, 5vw, 54px);
+  color: var(--dark);
+  margin: 12px 0;
+}
+
+h2 {
+  font-size: clamp(25px, 3vw, 34px);
+  color: var(--dark);
+  margin: 0 0 12px;
+}
+
+h3 {
+  color: var(--dark);
+  margin: 8px 0;
+}
+
+p {
+  margin: 8px 0 15px;
+  overflow-wrap: break-word;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  background: linear-gradient(120deg, #fff0f6, #f4effb);
+}
+
+.hero-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 27px;
+  background: #f7dfe9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 28px;
+  background: var(--pink);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px 5px 5px 0;
+}
+
+.btn.light {
+  background: white;
+  color: var(--dark);
+  border: 1px solid #efcada;
+}
+
+.center {
+  text-align: center;
+}
+
+.intro {
+  max-width: 730px;
+  margin: 0 auto 30px;
+  text-align: center;
+  color: var(--muted);
+  overflow-wrap: break-word;
+}
+
+.soft {
+  background: #fff0f6;
+}
+
+.lilac {
+  background: var(--lavender);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  min-width: 0;
+  background: white;
+  border: 1px solid #f1dfe7;
+  border-radius: 21px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(119,60,88,.09);
+}
+
+.card img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  display: block;
+  background: #f9e5ee;
+}
+
+.card-body {
+  padding: 18px;
+  min-width: 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.tag {
+  display: inline-block;
+  background: var(--soft);
+  color: var(--dark);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.detail {
+  display: none;
+  border-top: 1px solid #f0dce5;
+  margin-top: 12px;
+  padding-top: 10px;
+}
+
+.detail.open {
+  display: block;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.info {
+  min-width: 0;
+  background: white;
+  padding: 22px;
+  border-radius: 19px;
+  box-shadow: 0 10px 28px rgba(119,60,88,.09);
+}
+
+.info p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.symbol {
+  font-size: 25px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.stat {
+  background: white;
+  padding: 18px;
+  text-align: center;
+  border-radius: 17px;
+}
+
+.stat strong {
+  display: block;
+  color: var(--dark);
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.callout {
+  background: white;
+  border-left: 5px solid var(--pink);
+  padding: 18px 21px;
+  border-radius: 12px;
+  margin-top: 22px;
+  overflow-wrap: break-word;
+}
+
+form {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+fieldset {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border: 1px solid #efd5e1;
+  border-radius: 17px;
+  background: white;
+  padding: 18px;
+  margin: 17px 0;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--dark);
+  padding: 0 8px;
+  white-space: normal;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  overflow-wrap: break-word;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--pink);
+  margin-right: 8px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 95px;
+  padding: 12px;
+  border: 1px solid #e8cbd8;
+  border-radius: 12px;
+  font: inherit;
+}
+
+.result {
+  display: none;
+  background: white;
+  border: 1px solid #ecc9d9;
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 18px;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+footer {
+  background: #493847;
+  color: white;
+  text-align: center;
+  padding: 32px 7%;
+}
+
+footer p {
+  font-size: 13px;
+  color: #f5e7ee;
+}
+
+/* Perbaikan khusus tulisan di kolom Pilihan Bunda */
+#pilihan {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
 #pilihan > .center,
 #pilihan > .intro,
-#pilihan > form{
-  width:100%;
-  max-width:760px;
-  min-width:0;
-  margin-left:auto;
-  margin-right:auto;
-}
-#pilihan .intro{
-  padding-left:8px;
-  padding-right:8px;
-  overflow-wrap:break-word;
-}
-#pilihan form{
-  display:block;
-}
-#pilihan fieldset{
-  display:block;
-  width:100%;
-  min-width:0;
-  max-width:100%;
-  margin:18px 0;
-  padding:20px;
-  overflow-wrap:break-word;
-}
-#pilihan legend{
-  display:table;
-  max-width:100%;
-  white-space:normal;
-  overflow-wrap:break-word;
-}
-#pilihan label{
-  display:flex;
-  align-items:flex-start;
-  gap:8px;
-  width:100%;
-  max-width:100%;
-  margin:13px 0;
-  white-space:normal;
-  overflow-wrap:anywhere;
-}
-#pilihan label input[type="checkbox"]{
-  flex:0 0 auto;
-  margin:6px 0 0;
-}
-#pilihan textarea{
-  display:block;
-  width:100%;
-  max-width:100%;
-  min-width:0;
-}
-#pilihan .btn{
-  max-width:100%;
-  white-space:normal;
-}
-#pilihan .result{
-  width:100%;
-  max-width:100%;
-  overflow-wrap:anywhere;
+#pilihan > form {
+  width: 100%;
+  max-width: 760px;
+  min-width: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media(max-width:850px){
-  header{position:relative}
-  .hero{grid-template-columns:1fr}
-  .hero-img{height:290px}
-  .cards,.info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#pilihan .intro {
+  padding-left: 8px;
+  padding-right: 8px;
 }
-@media(max-width:560px){
-  section{padding:40px 5%}
-  .cards,.info-grid,.stats{grid-template-columns:1fr}
-  nav{gap:10px}
-  nav a{font-size:11px}
-  .brand-name{font-size:15px}
-  #pilihan fieldset{padding:14px}
+
+#pilihan form {
+  display: block;
+}
+
+#pilihan fieldset {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 18px;
+  margin: 17px 0;
+  overflow: hidden;
+}
+
+/* Tulisan pilihan diturunkan sedikit saja */
+#pilihan fieldset label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 10px 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+#pilihan label input[type="checkbox"] {
+  flex: 0 0 auto;
+  margin: 6px 0 0;
+}
+
+#pilihan textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+#pilihan .result {
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 850px) {
+  header {
+    position: relative;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-img {
+    height: 290px;
+  }
+
+  .cards, .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  section {
+    padding: 40px 5%;
+  }
+
+  .cards, .info-grid, .stats {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  #pilihan fieldset {
+    padding: 14px;
+  }
 }
 </style>
 </head>
@@ -238,7 +492,7 @@ footer p{font-size:13px;color:#f5e7ee}
 <header>
   <div class="brand">
     <div class="logo">
-      <svg viewBox="0 0 100 100" width="44" height="44" aria-label="Logo ibu dan bayi">
+      <svg viewBox="0 0 100 100" width="44" height="44" aria-label="Logo KB">
         <path d="M50 86 C38 73 12 56 12 34 C12 13 38 8 50 27 C62 8 88 13 88 34 C88 56 62 74 50 86Z" fill="#c85f88"/>
         <circle cx="43" cy="35" r="10" fill="#fffaf6"/>
         <path d="M28 65 C28 49 39 44 47 49 C59 44 71 54 71 67 Q50 80 28 65Z" fill="#fffaf6"/>
@@ -250,12 +504,13 @@ footer p{font-size:13px;color:#f5e7ee}
       <div class="brand-sub">SAHABAT BUNDA</div>
     </div>
   </div>
+
   <nav>
     <a href="#beranda">Beranda</a>
     <a href="#tentang">Tentang</a>
     <a href="#jenis">Jenis KB</a>
     <a href="#menyusui">KB Menyusui</a>
-    <a href="#dukungan">Dukungan Suami</a>
+    <a href="#dukungan">Dukungan</a>
     <a href="#pilihan">Pilihan Bunda</a>
     <a href="#evaluasi">Evaluasi</a>
   </nav>
@@ -271,8 +526,7 @@ footer p{font-size:13px;color:#f5e7ee}
     <a class="btn" href="#tentang">Mulai Belajar</a>
     <a class="btn light" href="#menyusui">KB untuk Ibu Menyusui</a>
   </div>
-  <img class="hero-img" src="images/ibu-menyusui.jpg" alt="Ibu menyusui bayi"
-    onerror="this.alt='Foto belum ditemukan. Periksa folder images.'">
+  <img class="hero-img" src="images/ibu-menyusui.jpg" alt="Ibu menyusui bayi">
 </section>
 
 <section id="tentang">
@@ -281,16 +535,19 @@ footer p{font-size:13px;color:#f5e7ee}
     <h2>Apa Itu E-KB PASCA SALIN?</h2>
   </div>
   <p class="intro">E-KB PASCA SALIN adalah website edukasi yang membantu ibu setelah melahirkan mengenal berbagai pilihan kontrasepsi. Informasi disajikan dengan bahasa sederhana agar Bunda lebih siap berdiskusi dengan bidan atau dokter.</p>
+
   <div class="info-grid">
     <article class="info"><div class="symbol">🌷</div><h3>Belajar dengan Mudah</h3><p>Informasi singkat, gambar yang jelas, dan penjelasan yang mudah dipahami.</p></article>
     <article class="info"><div class="symbol">💗</div><h3>Mengenal Pilihan KB</h3><p>Pelajari cara kerja, manfaat, dan efek samping yang mungkin terjadi.</p></article>
     <article class="info"><div class="symbol">🤝</div><h3>Siapkan Konsultasi</h3><p>Catat hal yang ingin Bunda tanyakan kepada tenaga kesehatan.</p></article>
   </div>
+
   <div class="stats">
     <div class="stat"><strong>KENALI</strong><span>Jenis kontrasepsi</span></div>
     <div class="stat"><strong>PAHAMI</strong><span>Manfaat dan pertimbangan</span></div>
     <div class="stat"><strong>DISKUSIKAN</strong><span>Dengan tenaga kesehatan</span></div>
   </div>
+
   <div class="callout"><strong>Ingat, Bunda!</strong> Tidak ada satu metode yang otomatis cocok untuk semua ibu. Pilihan dan waktu penggunaan perlu disesuaikan dengan kondisi kesehatan dan keadaan setelah persalinan.</div>
 </section>
 
@@ -319,15 +576,16 @@ footer p{font-size:13px;color:#f5e7ee}
     <h2>Dukungan Suami untuk Bunda 💗</h2>
   </div>
   <p class="intro">Setelah melahirkan, Bunda menjalani banyak perubahan. Dukungan suami dapat membantu Bunda merasa lebih tenang saat mencari informasi dan mempertimbangkan kontrasepsi.</p>
+
   <div class="hero" style="border-radius:24px;overflow:hidden;padding:25px">
     <div>
       <h2>Bunda Tidak Sendiri</h2>
       <p>Suami dapat menjadi teman diskusi saat Bunda mengenal pilihan KB. Dukungan bukan berarti menentukan pilihan untuk Bunda, tetapi mendengarkan dan menghormati keinginan Bunda.</p>
       <p>Suami juga dapat membantu merawat bayi, berbagi pekerjaan rumah, dan menemani konsultasi jika Bunda menginginkannya.</p>
     </div>
-    <img class="hero-img" src="images/dukungan-suami.jpg" alt="Suami mendampingi istri dan bayi"
-      onerror="this.alt='Tambahkan foto dukungan-suami.jpg ke folder images.'">
+    <img class="hero-img" src="images/dukungan-suami.jpg" alt="Suami mendampingi istri dan bayi">
   </div>
+
   <div class="info-grid" style="margin-top:24px">
     <article class="info"><div class="symbol">💬</div><h3>Mau Mendengarkan</h3><p>Berikan ruang bagi Bunda untuk menyampaikan harapan dan kekhawatiran.</p></article>
     <article class="info"><div class="symbol">📖</div><h3>Belajar Bersama</h3><p>Baca informasi tentang manfaat dan kemungkinan efek samping KB bersama.</p></article>
@@ -336,6 +594,7 @@ footer p{font-size:13px;color:#f5e7ee}
     <article class="info"><div class="symbol">🍼</div><h3>Berbagi Peran</h3><p>Bantu merawat bayi dan pekerjaan rumah agar Bunda dapat beristirahat.</p></article>
     <article class="info"><div class="symbol">❤️</div><h3>Saling Mendukung</h3><p>Perencanaan keluarga dapat dibicarakan bersama dengan menghormati keputusan Bunda.</p></article>
   </div>
+
   <div class="callout"><strong>Pesan untuk Bunda dan Ayah:</strong> Dukungan yang baik adalah mendengarkan, memberi informasi, dan menghormati keputusan tanpa paksaan.</div>
 </section>
 
@@ -344,24 +603,29 @@ footer p{font-size:13px;color:#f5e7ee}
     <span class="eyebrow">RUANG UNTUK BUNDA</span>
     <h2>Hal yang Ingin Kupertimbangkan</h2>
   </div>
+
   <p class="intro">Tandai hal yang penting bagi Bunda. Catatan ini dapat dibawa saat konsultasi dan tidak menentukan metode KB secara otomatis.</p>
+
   <form id="formPilihan">
     <fieldset>
       <legend>Apa yang ingin Bunda pertimbangkan?</legend>
-      <label><input type="checkbox" name="alasan" value="Saya sedang menyusui"> Saya sedang menyusui</label>
-      <label><input type="checkbox" name="alasan" value="Saya ingin menunda kehamilan"> Saya ingin menunda kehamilan</label>
-      <label><input type="checkbox" name="alasan" value="Saya ingin mengetahui efek samping"> Saya ingin mengetahui efek samping</label>
-      <label><input type="checkbox" name="alasan" value="Saya ingin metode praktis"> Saya ingin metode yang praktis</label>
-      <label><input type="checkbox" name="alasan" value="Saya ingin mengetahui lama perlindungan"> Saya ingin mengetahui lama perlindungan</label>
+      <label><input type="checkbox" name="alasan" value="Saya sedang menyusui"> <span>Saya sedang menyusui</span></label>
+      <label><input type="checkbox" name="alasan" value="Saya ingin menunda kehamilan"> <span>Saya ingin menunda kehamilan</span></label>
+      <label><input type="checkbox" name="alasan" value="Saya ingin mengetahui efek samping"> <span>Saya ingin mengetahui efek samping</span></label>
+      <label><input type="checkbox" name="alasan" value="Saya ingin metode yang praktis"> <span>Saya ingin metode yang praktis</span></label>
+      <label><input type="checkbox" name="alasan" value="Saya ingin mengetahui lama perlindungan"> <span>Saya ingin mengetahui lama perlindungan</span></label>
     </fieldset>
+
     <fieldset>
       <legend>Metode yang ingin kupelajari</legend>
       <div id="pilihanMetode"></div>
     </fieldset>
+
     <fieldset>
       <legend>Pertanyaan untuk bidan</legend>
       <textarea id="pertanyaan" placeholder="Contoh: Kapan saya dapat mulai menggunakan KB?"></textarea>
     </fieldset>
+
     <button class="btn" type="submit">Tampilkan Catatanku</button>
     <button class="btn light" type="button" id="downloadPilihan">Unduh Catatan</button>
     <div class="result" id="hasilPilihan" aria-live="polite"></div>
@@ -374,30 +638,36 @@ footer p{font-size:13px;color:#f5e7ee}
     <h2>Evaluasi Website 🌸</h2>
   </div>
   <p class="intro">Bantu kami mengetahui apakah website ini mudah dipahami dan bermanfaat. Pilih jawaban sesuai pengalaman Bunda.</p>
+
   <form id="formEvaluasi">
     <fieldset><legend>1. Informasi website mudah dipahami</legend>
       <label><input type="radio" name="q1" value="Sangat mudah" required> Sangat mudah</label>
       <label><input type="radio" name="q1" value="Mudah"> Mudah</label>
       <label><input type="radio" name="q1" value="Kurang mudah"> Kurang mudah</label>
     </fieldset>
+
     <fieldset><legend>2. Gambar membantu mengenali jenis KB</legend>
       <label><input type="radio" name="q2" value="Sangat membantu" required> Sangat membantu</label>
       <label><input type="radio" name="q2" value="Membantu"> Membantu</label>
       <label><input type="radio" name="q2" value="Kurang membantu"> Kurang membantu</label>
     </fieldset>
+
     <fieldset><legend>3. Website menambah pengetahuan saya tentang KB</legend>
       <label><input type="radio" name="q3" value="Bertambah banyak" required> Bertambah banyak</label>
       <label><input type="radio" name="q3" value="Bertambah sedikit"> Bertambah sedikit</label>
       <label><input type="radio" name="q3" value="Belum bertambah"> Belum bertambah</label>
     </fieldset>
+
     <fieldset><legend>4. Website membantu saya menyiapkan pertanyaan untuk bidan</legend>
       <label><input type="radio" name="q4" value="Sangat membantu" required> Sangat membantu</label>
       <label><input type="radio" name="q4" value="Membantu"> Membantu</label>
       <label><input type="radio" name="q4" value="Belum membantu"> Belum membantu</label>
     </fieldset>
+
     <fieldset><legend>5. Saran untuk website</legend>
       <textarea id="saran" placeholder="Apa yang Bunda sukai atau ingin diperbaiki?"></textarea>
     </fieldset>
+
     <button class="btn" type="submit">Kirim Evaluasi</button>
     <button class="btn light" type="button" id="downloadEvaluasi">Unduh Jawaban</button>
     <div class="result" id="hasilEvaluasi" aria-live="polite"></div>
@@ -426,87 +696,186 @@ footer p{font-size:13px;color:#f5e7ee}
 </footer>
 
 <script>
-const dataKB=[
- {nama:"Pil KB",file:"pil-kb.jpg",tag:"Diminum teratur",desc:"Pil diminum sesuai jadwal. Terdapat beberapa jenis pil dengan kandungan berbeda.",manfaat:"Tidak memerlukan pemasangan alat.",efek:"Perubahan pola haid, mual, atau keluhan lain dapat terjadi.",catatan:"Jenis pil dan waktu memulai perlu dibicarakan dengan tenaga kesehatan, terutama jika menyusui."},
- {nama:"Suntik 1 Bulan",file:"suntik-1-bulan.jpg",tag:"Suntik berkala",desc:"Kontrasepsi suntik yang umumnya diulang setiap satu bulan.",manfaat:"Tidak perlu mengingat pil setiap hari.",efek:"Perubahan pola haid dan keluhan lain dapat terjadi.",catatan:"Umumnya mengandung estrogen dan progestin. Waktu penggunaan setelah melahirkan, terutama saat menyusui, perlu dinilai tenaga kesehatan."},
- {nama:"Suntik 3 Bulan",file:"suntik-3-bulan.jpg",tag:"Suntik berkala",desc:"Kontrasepsi suntik yang umumnya diulang setiap tiga bulan.",manfaat:"Tidak perlu digunakan setiap hari.",efek:"Pola haid dapat berubah atau haid tidak datang.",catatan:"Dapat dipertimbangkan saat menyusui. Konsultasikan waktu memulai dan jadwal suntik ulang."},
- {nama:"Implan",file:"implan.jpg",tag:"Jangka panjang",desc:"Batang kecil yang dipasang di bawah kulit lengan oleh tenaga kesehatan.",manfaat:"Memberikan perlindungan jangka panjang.",efek:"Perubahan pola haid dapat terjadi.",catatan:"Pemasangan dan pelepasan dilakukan oleh tenaga terlatih."},
- {nama:"IUD / AKDR",file:"iud.jpg",tag:"Jangka panjang",desc:"Alat kecil yang ditempatkan di dalam rahim oleh tenaga kesehatan.",manfaat:"Perlindungan jangka panjang tanpa mengingat penggunaan harian.",efek:"Pola perdarahan dapat berubah bergantung jenis IUD.",catatan:"Waktu pemasangan disesuaikan dengan keadaan setelah persalinan."},
- {nama:"Kondom",file:"kondom.jpg",tag:"Saat berhubungan",desc:"Kondom digunakan setiap kali berhubungan seksual.",manfaat:"Tidak mengandung hormon dan membantu mengurangi risiko infeksi menular seksual.",efek:"Dapat robek atau terlepas jika tidak digunakan dengan benar.",catatan:"Gunakan secara benar setiap kali berhubungan."},
- {nama:"MAL",file:"mal.jpg",tag:"Metode menyusui",desc:"Metode Amenore Laktasi merupakan kontrasepsi sementara dengan kriteria khusus.",manfaat:"Tidak memerlukan alat atau obat jika seluruh kriteria terpenuhi.",efek:"Perlindungan berkurang bila salah satu kriteria tidak terpenuhi.",catatan:"Bayi berusia kurang dari enam bulan, haid belum kembali, dan menyusui penuh atau hampir penuh siang dan malam."},
- {nama:"MOW / MOP",file:"mow-mop.jpg",tag:"Permanen",desc:"Metode kontrasepsi permanen untuk perempuan atau laki-laki.",manfaat:"Ditujukan bagi orang yang yakin tidak ingin memiliki anak lagi.",efek:"Memerlukan tindakan medis dan pertimbangan risiko tersendiri.",catatan:"Keputusan harus sukarela setelah konsultasi mendalam."}
+const dataKB = [
+  {
+    nama:"Pil KB", file:"pil-kb.jpg", tag:"Diminum teratur",
+    desc:"Pil diminum sesuai jadwal. Terdapat beberapa jenis pil dengan kandungan berbeda.",
+    manfaat:"Tidak memerlukan pemasangan alat.",
+    efek:"Perubahan pola haid, mual, atau keluhan lain dapat terjadi.",
+    catatan:"Jenis pil dan waktu memulai perlu dibicarakan dengan tenaga kesehatan, terutama jika menyusui."
+  },
+  {
+    nama:"Suntik 1 Bulan", file:"suntik-1-bulan.jpg", tag:"Suntik berkala",
+    desc:"Kontrasepsi suntik yang umumnya diulang setiap satu bulan.",
+    manfaat:"Tidak perlu mengingat pil setiap hari.",
+    efek:"Perubahan pola haid dan keluhan lain dapat terjadi.",
+    catatan:"Umumnya mengandung estrogen dan progestin. Waktu penggunaan setelah melahirkan, terutama saat menyusui, perlu dinilai tenaga kesehatan."
+  },
+  {
+    nama:"Suntik 3 Bulan", file:"suntik-3-bulan.jpg", tag:"Suntik berkala",
+    desc:"Kontrasepsi suntik yang umumnya diulang setiap tiga bulan.",
+    manfaat:"Tidak perlu digunakan setiap hari.",
+    efek:"Pola haid dapat berubah atau haid tidak datang.",
+    catatan:"Dapat dipertimbangkan saat menyusui. Konsultasikan waktu memulai dan jadwal suntik ulang."
+  },
+  {
+    nama:"Implan", file:"implan.jpg", tag:"Jangka panjang",
+    desc:"Batang kecil yang dipasang di bawah kulit lengan oleh tenaga kesehatan.",
+    manfaat:"Memberikan perlindungan jangka panjang.",
+    efek:"Perubahan pola haid dapat terjadi.",
+    catatan:"Pemasangan dan pelepasan dilakukan oleh tenaga terlatih."
+  },
+  {
+    nama:"IUD / AKDR", file:"iud.jpg", tag:"Jangka panjang",
+    desc:"Alat kecil yang ditempatkan di dalam rahim oleh tenaga kesehatan.",
+    manfaat:"Perlindungan jangka panjang tanpa mengingat penggunaan harian.",
+    efek:"Pola perdarahan dapat berubah bergantung jenis IUD.",
+    catatan:"Waktu pemasangan disesuaikan dengan keadaan setelah persalinan."
+  },
+  {
+    nama:"Kondom", file:"kondom.jpg", tag:"Saat berhubungan",
+    desc:"Kondom digunakan setiap kali berhubungan seksual.",
+    manfaat:"Tidak mengandung hormon dan membantu mengurangi risiko infeksi menular seksual.",
+    efek:"Dapat robek atau terlepas jika tidak digunakan dengan benar.",
+    catatan:"Gunakan secara benar setiap kali berhubungan."
+  },
+  {
+    nama:"MAL", file:"mal.jpg", tag:"Metode menyusui",
+    desc:"Metode Amenore Laktasi merupakan kontrasepsi sementara dengan kriteria khusus.",
+    manfaat:"Tidak memerlukan alat atau obat jika seluruh kriteria terpenuhi.",
+    efek:"Perlindungan berkurang bila salah satu kriteria tidak terpenuhi.",
+    catatan:"Bayi berusia kurang dari enam bulan, haid belum kembali, dan menyusui penuh atau hampir penuh siang dan malam."
+  },
+  {
+    nama:"MOW / MOP", file:"mow-mop.jpg", tag:"Permanen",
+    desc:"Metode kontrasepsi permanen untuk perempuan atau laki-laki.",
+    manfaat:"Ditujukan bagi orang yang yakin tidak ingin memiliki anak lagi.",
+    efek:"Memerlukan tindakan medis dan pertimbangan risiko tersendiri.",
+    catatan:"Keputusan harus sukarela setelah konsultasi mendalam."
+  }
 ];
 
-function buatKartu(m,i){
- return `<article class="card">
-  <img src="images/${m.file}" alt="Foto ${m.nama}" loading="lazy"
-    onerror="this.alt='Foto belum tersedia: images/${m.file}'">
-  <div class="card-body">
-   <span class="tag">${m.tag}</span>
-   <h3>${m.nama}</h3>
-   <p>${m.desc}</p>
-   <button class="btn" type="button" aria-expanded="false" onclick="toggleDetail(${i},this)">Lihat Penjelasan</button>
-   <div class="detail" id="detail${i}">
-    <p><strong>Manfaat:</strong> ${m.manfaat}</p>
-    <p><strong>Efek samping yang mungkin terjadi:</strong> ${m.efek}</p>
-    <p><strong>Hal yang perlu dipertimbangkan:</strong> ${m.catatan}</p>
-   </div>
-  </div>
- </article>`;
+function buatKartu(m, id) {
+  return `
+    <article class="card">
+      <img src="images/${m.file}" alt="Foto ${m.nama}" loading="lazy">
+      <div class="card-body">
+        <span class="tag">${m.tag}</span>
+        <h3>${m.nama}</h3>
+        <p>${m.desc}</p>
+        <button class="btn" type="button"
+          aria-expanded="false"
+          onclick="toggleDetail('${id}',this)">Lihat Penjelasan</button>
+        <div class="detail" id="detail-${id}">
+          <p><strong>Manfaat:</strong> ${m.manfaat}</p>
+          <p><strong>Efek samping yang mungkin terjadi:</strong> ${m.efek}</p>
+          <p><strong>Hal yang perlu dipertimbangkan:</strong> ${m.catatan}</p>
+        </div>
+      </div>
+    </article>`;
 }
 
-document.getElementById("kartuKB").innerHTML=dataKB.map((m,i)=>buatKartu(m,i)).join("");
-document.getElementById("kartuMenyusui").innerHTML=[2,3,4,5,6].map(i=>buatKartu(dataKB[i],i+20)).join("");
-document.getElementById("pilihanMetode").innerHTML=dataKB.map(m=>
- `<label><input type="checkbox" name="metode" value="${m.nama}"> ${m.nama}</label>`).join("");
+document.getElementById("kartuKB").innerHTML =
+  dataKB.map((m, i) => buatKartu(m, "utama-" + i)).join("");
 
-function toggleDetail(i,btn){
- const el=document.getElementById("detail"+i);
- el.classList.toggle("open");
- btn.textContent=el.classList.contains("open")?"Tutup Penjelasan":"Lihat Penjelasan";
- btn.setAttribute("aria-expanded",el.classList.contains("open")?"true":"false");
+document.getElementById("kartuMenyusui").innerHTML =
+  [2,3,4,5,6].map(i => buatKartu(dataKB[i], "menyusui-" + i)).join("");
+
+document.getElementById("pilihanMetode").innerHTML =
+  dataKB.map(m => `
+    <label>
+      <input type="checkbox" name="metode" value="${m.nama}">
+      <span>${m.nama}</span>
+    </label>
+  `).join("");
+
+function toggleDetail(id, button) {
+  const detail = document.getElementById("detail-" + id);
+  detail.classList.toggle("open");
+  const terbuka = detail.classList.contains("open");
+  button.textContent = terbuka ? "Tutup Penjelasan" : "Lihat Penjelasan";
+  button.setAttribute("aria-expanded", terbuka ? "true" : "false");
 }
 
-function aman(s){
- return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function aman(teks) {
+  return String(teks).replace(/[&<>"']/g, karakter => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  }[karakter]));
 }
 
-let teksPilihan="",teksEvaluasi="";
+let teksPilihan = "";
+let teksEvaluasi = "";
 
-document.getElementById("formPilihan").addEventListener("submit",function(e){
- e.preventDefault();
- const alasan=[...document.querySelectorAll('input[name="alasan"]:checked')].map(x=>x.value);
- const metode=[...document.querySelectorAll('input[name="metode"]:checked')].map(x=>x.value);
- teksPilihan="CATATAN BUNDA\nHal yang dipertimbangkan: "+(alasan.join(", ")||"Belum dipilih")+
- "\nMetode yang ingin dipelajari: "+(metode.join(", ")||"Belum dipilih")+
- "\nPertanyaan untuk bidan: "+(document.getElementById("pertanyaan").value||"-");
- const box=document.getElementById("hasilPilihan");
- box.style.display="block";
- box.innerHTML="<h3>Catatan Bunda sudah siap 💗</h3><p>"+aman(teksPilihan).replace(/\n/g,"<br>")+"</p><p>Bawa catatan ini saat berkonsultasi dengan bidan atau dokter.</p>";
+document.getElementById("formPilihan").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const alasan = [...document.querySelectorAll('input[name="alasan"]:checked')]
+    .map(x => x.value);
+  const metode = [...document.querySelectorAll('input[name="metode"]:checked')]
+    .map(x => x.value);
+
+  teksPilihan =
+    "CATATAN BUNDA\n" +
+    "Hal yang dipertimbangkan: " + (alasan.join(", ") || "Belum dipilih") + "\n" +
+    "Metode yang ingin dipelajari: " + (metode.join(", ") || "Belum dipilih") + "\n" +
+    "Pertanyaan untuk bidan: " + (document.getElementById("pertanyaan").value || "-");
+
+  const box = document.getElementById("hasilPilihan");
+  box.style.display = "block";
+  box.innerHTML =
+    "<h3>Catatan Bunda sudah siap 💗</h3><p>" +
+    aman(teksPilihan).replace(/\n/g, "<br>") +
+    "</p><p>Bawa catatan ini saat berkonsultasi dengan bidan atau dokter.</p>";
 });
 
-document.getElementById("formEvaluasi").addEventListener("submit",function(e){
- e.preventDefault();
- const fd=new FormData(e.target);
- teksEvaluasi="EVALUASI WEBSITE E-KB PASCA SALIN\n";
- for(let i=1;i<=4;i++)teksEvaluasi+="Pertanyaan "+i+": "+fd.get("q"+i)+"\n";
- teksEvaluasi+="Saran: "+(document.getElementById("saran").value||"-");
- const box=document.getElementById("hasilEvaluasi");
- box.style.display="block";
- box.innerHTML="<h3>Terima kasih, Bunda! 🌷</h3><p>Jawaban evaluasi telah dirangkum. Gunakan tombol Unduh Jawaban untuk menyimpan salinannya.</p><p>Jawaban belum otomatis terkirim kepada peneliti.</p>";
+document.getElementById("formEvaluasi").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = new FormData(e.target);
+  teksEvaluasi = "EVALUASI WEBSITE E-KB PASCA SALIN\n";
+
+  for (let i = 1; i <= 4; i++) {
+    teksEvaluasi += "Pertanyaan " + i + ": " + data.get("q" + i) + "\n";
+  }
+
+  teksEvaluasi += "Saran: " + (document.getElementById("saran").value || "-");
+
+  const box = document.getElementById("hasilEvaluasi");
+  box.style.display = "block";
+  box.innerHTML =
+    "<h3>Terima kasih, Bunda! 🌷</h3>" +
+    "<p>Jawaban evaluasi sudah dirangkum. Gunakan tombol Unduh Jawaban untuk menyimpan salinannya.</p>" +
+    "<p>Jawaban belum otomatis terkirim kepada peneliti.</p>";
 });
 
-function unduh(teks,nama){
- if(!teks){alert("Silakan isi formulir terlebih dahulu.");return;}
- const blob=new Blob([teks],{type:"text/plain;charset=utf-8"});
- const url=URL.createObjectURL(blob);
- const a=document.createElement("a");
- a.href=url;a.download=nama;a.click();
- URL.revokeObjectURL(url);
+function unduh(teks, namaFile) {
+  if (!teks) {
+    alert("Silakan isi formulir terlebih dahulu.");
+    return;
+  }
+
+  const blob = new Blob([teks], {type:"text/plain;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = namaFile;
+  link.click();
+
+  URL.revokeObjectURL(url);
 }
 
-document.getElementById("downloadPilihan").addEventListener("click",()=>unduh(teksPilihan,"catatan-bunda.txt"));
-document.getElementById("downloadEvaluasi").addEventListener("click",()=>unduh(teksEvaluasi,"evaluasi-ekb.txt"));
+document.getElementById("downloadPilihan").addEventListener("click", () => {
+  unduh(teksPilihan, "catatan-bunda.txt");
+});
+
+document.getElementById("downloadEvaluasi").addEventListener("click", () => {
+  unduh(teksEvaluasi, "evaluasi-ekb.txt");
+});
 </script>
 </body>
 </html>
