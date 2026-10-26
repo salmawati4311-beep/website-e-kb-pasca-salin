@@ -584,46 +584,27 @@ footer p {
     letter-spacing: 0;
   }
 /* Merapikan slogan dan paragraf di HP */
-@media (max-width: 600px) {
-  .about-slogan {
-    color: #292329;
-    max-width: 100%;
-    margin: 16px auto 22px;
-    padding: 0 6px;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .about-intro {
-    max-width: 340px;
-    margin: 0 auto 28px;
-    padding: 0 12px;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-  #tentang .eyebrow {
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
-}
-  #tentang .center h2 {
-    font-size: 25px;
-    line-height: 1.35;
-    white-space: normal;
-    letter-spacing: 0;
-  }
-}
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #kartuKB.cards {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+    width: 100% !important;
   }
-  #kartuKB .card {
+  #kartuKB.cards > .card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  #kartuKB.cards > .card img {
     width: 100%;
-    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 </style>
