@@ -522,6 +522,60 @@ footer p {
   background: var(--pink);
   color: white;
 }
+
+/* Kotak pink khusus halaman Tentang */
+#tentang .info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#tentang .info {
+  background: #fff0f5;
+  border: 1px solid #f8c6d8;
+  border-radius: 16px;
+  padding: 14px 10px;
+  min-width: 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(220, 120, 155, 0.08);
+}
+
+#tentang .info h3 {
+  color: #a84670;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#tentang .info p {
+  color: #704d5c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#tentang .info .symbol {
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  #tentang .info-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+  #tentang .info {
+    padding: 10px 5px;
+    border-radius: 12px;
+  }
+  #tentang .info h3 {
+    font-size: 11px;
+  }
+  #tentang .info p {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  #tentang .info .symbol {
+    font-size: 20px;
+  }
+}
 </style>
 </head>
 <body>
