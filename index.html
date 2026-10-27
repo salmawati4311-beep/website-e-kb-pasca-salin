@@ -335,7 +335,6 @@ form {
   margin: 0 auto;
   min-width: 0;
 }
-
 fieldset {
   width: 100%;
   min-width: 0;
@@ -343,16 +342,20 @@ fieldset {
   border: 1px solid #efd5e1;
   border-radius: 17px;
   background: white;
-padding: 32px 18px 18px;
-  margin: 17px 0;
+  padding: 20px 18px 24px;
+  margin: 28px 0;
 }
 legend {
+  display: table;
+  max-width: 100%;
+  box-sizing: border-box;
   font-weight: bold;
   color: var(--dark);
-  padding: 8px 10px;
+  padding: 0 8px;
+  margin: 0;
   white-space: normal;
-  position: relative;
-  top: 10px;
+  line-height: 1.5;
+  position: static;
 }
 label {
   display: block;
