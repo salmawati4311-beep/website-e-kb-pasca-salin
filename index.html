@@ -723,19 +723,20 @@ footer p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
+  justify-content: flex-start;
+  gap: 10px;
   width: 100%;
   box-sizing: border-box;
-  padding: 14px 16px;
+  padding: 12px 12px;
   margin: 0 auto;
   background: #fffafd;
   border-bottom: 1px solid #f0d9e5;
 }
 
 .logo-kampus img {
-  width: 75px;
-  height: 75px;
+  width: 78px;
+  height: 78px;
+  max-width: 78px;
   object-fit: contain;
   flex-shrink: 0;
   display: block;
@@ -752,36 +753,39 @@ footer p {
 .nama-kampus span {
   color: #96758f;
   font-family: Arial, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   white-space: nowrap;
 }
 
 .nama-kampus strong {
   color: #70406d;
   font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: -0.3px;
   line-height: 1.3;
   white-space: nowrap;
 }
+
 @media (max-width: 600px) {
   .logo-kampus {
-    gap: 10px;
-    padding: 12px 10px;
+    gap: 9px;
+    padding: 10px 8px;
   }
+
   .logo-kampus img {
-    width: 70px;
-    height: 70px;
+    width: 74px;
+    height: 74px;
+    max-width: 74px;
   }
   .nama-kampus span {
-    font-size: 8px;
+    font-size: 9px;
     letter-spacing: 0;
   }
   .nama-kampus strong {
-    font-size: clamp(9px, 2.8vw, 13px);
+    font-size: clamp(10px, 3vw, 13px);
     letter-spacing: -0.4px;
   }
 }
