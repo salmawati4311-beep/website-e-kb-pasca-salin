@@ -344,8 +344,6 @@ legend {
   margin: 0;
   white-space: normal;
   line-height: 1.5;
-  position: relative;
-  top: 12px;
 }
 label {
   display: block;
@@ -609,12 +607,16 @@ footer p {
     height: auto;
     object-fit: contain;
   }
-}
 /* Khusus KB untuk Ibu Menyusui di HP */
 @media (max-width: 600px) {
   #kartuMenyusui {
     grid-template-columns: 1fr !important;
   }
+}
+/* Khusus tulisan pertanyaan di kotak evaluasi */
+#evaluasi fieldset legend {
+  position: relative;
+  top: 5px;
 }
 </style>
 </head>
