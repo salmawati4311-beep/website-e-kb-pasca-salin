@@ -648,6 +648,7 @@ footer p {
     height: 290px !important;
     object-fit: cover;
   }
+
 /* Khusus Evaluasi Website KB */
 #formEvaluasi fieldset {
   box-sizing: border-box;
@@ -655,30 +656,39 @@ footer p {
   min-width: 0;
   padding: 12px 14px;
   margin-bottom: 14px;
+  border-radius: 18px;
 }
+
+/* Judul pertanyaan */
 #formEvaluasi fieldset legend {
-  display: table;
-  max-width: 95%;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.5;
   padding: 0 8px;
-  margin-left: 6px;
+  line-height: 1.4;
+  margin-bottom: 4px;
   white-space: normal;
 }
+
+/* Jarak pilihan jawaban */
 #formEvaluasi fieldset label {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
-  margin: 5px 0;
-  padding: 6px 7px;
+  margin: 0 0 7px;
+  padding: 3px 7px;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
+
+/* Posisi lingkaran pilihan */
 #formEvaluasi fieldset input[type="radio"] {
   flex-shrink: 0;
-  margin: 4px 0 0;
+  margin: 0;
 }
+
+/* Pilihan jawaban terakhir */
+#formEvaluasi fieldset label:last-child {
+  margin-bottom: 0;
+}
+  
 </style>
 </head>
 <body>
