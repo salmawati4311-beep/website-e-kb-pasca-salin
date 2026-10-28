@@ -613,10 +613,15 @@ footer p {
     grid-template-columns: 1fr !important;
   }
 }
-/* Khusus tulisan pertanyaan di kotak evaluasi */
-#evaluasi fieldset legend {
-  position: relative;
-  top: 5px;
+/* Mengembalikan kotak pertanyaan menjadi putih */
+#pilihan fieldset,
+#evaluasi fieldset {
+  background-color: #ffffff;
+  border: 1px solid #efd5e1;
+  border-radius: 17px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
 }
 </style>
 </head>
