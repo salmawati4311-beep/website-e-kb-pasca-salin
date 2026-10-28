@@ -420,6 +420,7 @@ footer p {
 }
 
 
+
 #pilihan fieldset {
   display: block;
   width: 100%;
@@ -429,7 +430,11 @@ footer p {
   padding: 18px 20px;
   margin: 17px 0;
   overflow: visible;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
+
 
 /* Tulisan pilihan diturunkan sedikit saja */
 #pilihan fieldset label {
@@ -472,12 +477,16 @@ footer p {
   .hero-img {
     height: 290px;
   }
-
-  .cards, .info-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
+.cards, .info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
 @media (max-width: 560px) {
   section {
     padding: 40px 5%;
