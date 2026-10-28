@@ -716,12 +716,75 @@ footer p {
     padding: 5px 3px !important;
   }
 }
+  
+/* Identitas kampus */
+.logo-kampus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 10px;
+  margin: 0 auto;
+  background: #fffafd;
+  border-bottom: 1px solid #f0d9e5;
+}
+
+.logo-kampus img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nama-kampus {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nama-kampus span {
+  font-size: 9px;
+  font-weight: 600;
+  color: #96758f;
+  white-space: nowrap;
+}
+
+.nama-kampus strong {
+  display: block;
+  color: #70406d;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+}
+@media (max-width: 600px) {
+  .logo-kampus {
+    gap: 8px;
+    padding: 10px 8px;
+  }
+  .logo-kampus img {
+    width: 58px;
+    height: 58px;
+  }
+  .nama-kampus span {
+    font-size: 8px;
+  }
+  .nama-kampus strong {
+    font-size: clamp(8px, 2.7vw, 12px);
+  }
+}
 </style>
 <body>
-  <div class="logo-kampus">
-    <img src="images/logo-stikes-transparan.png"
-         alt="Logo STIKES Abdurahman Palembang">
+<div class="logo-kampus">
+  <img src="images/logo-stikes-transparan.png"
+       alt="Logo STIKES Abdurahman Palembang">
+
+  <div class="nama-kampus">
+    <span>SEKOLAH TINGGI ILMU KESEHATAN</span>
+    <strong>STIKES ABDURAHMAN PALEMBANG</strong>
   </div>
+</div>
 <header>
   <div class="brand">
     <div class="logo">
