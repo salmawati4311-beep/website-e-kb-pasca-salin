@@ -634,6 +634,21 @@ footer p {
   width: 100%;
   min-width: 0;
 }
+  /* Memastikan foto ibu menyusui tampil di HP */
+@media screen and (max-width: 600px) {
+  .hero {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  .hero-img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 290px !important;
+    object-fit: cover;
+  }
+}
 </style>
 </head>
 <body>
