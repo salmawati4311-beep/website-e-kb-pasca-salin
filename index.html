@@ -823,14 +823,18 @@ footer p {
     flex: 0 0 55px !important;
     object-fit: contain !important;
   }
-
-  .logo-kampus .nama-kampus {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    transform: none !important;
-  }
-
+.logo-kampus .nama-kampus {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  position: static !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  text-align: left !important;
+}
   .logo-kampus .nama-kampus span {
     font-size: 11px !important;
   }
@@ -851,14 +855,15 @@ footer p {
     object-fit: contain !important;
   }
 }
+
 /* LOGO DAN NAMA KAMPUS BERDAMPINGAN DI LAPTOP */
 @media screen and (min-width: 601px) {
   body .logo-kampus {
-    display: grid !important;
-    grid-template-columns: 65px minmax(0, 1fr) !important;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
-    justify-content: start !important;
-    column-gap: 12px !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -867,8 +872,9 @@ footer p {
     display: block !important;
     width: 65px !important;
     height: 65px !important;
-    max-width: 65px !important;
     min-width: 65px !important;
+    max-width: 65px !important;
+    flex: 0 0 65px !important;
     object-fit: contain !important;
     margin: 0 !important;
   }
@@ -882,13 +888,13 @@ footer p {
     margin: 0 !important;
     padding: 0 !important;
     transform: none !important;
+   text-align: left !important;
   }
 
   body .logo-kampus .nama-kampus span,
   body .logo-kampus .nama-kampus strong {
     text-align: left !important;
     white-space: normal !important;
-    overflow-wrap: anywhere !important;
   }
 }
 </style>
