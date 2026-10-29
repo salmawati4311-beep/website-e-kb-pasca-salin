@@ -809,6 +809,38 @@ footer p {
   flex-shrink: 0 !important;
   margin-top: 3px !important;
 }
+#formEvaluasi fieldset input[type="radio"] {
+  flex-shrink: 0 !important;
+  margin-top: 3px !important;
+}
+  
+/* Khusus laptop: menyesuaikan tampilan logo kampus */
+@media (min-width: 601px) {
+  .logo-kampus {
+    gap: 10px;
+    padding: 12px 12px;
+    justify-content: flex-start;
+  }
+
+  .logo-kampus img {
+    width: 74px;
+    height: 74px;
+    max-width: 74px;
+  }
+
+  .nama-kampus {
+    transform: translateY(5px);
+  }
+  .nama-kampus span {
+    font-size: 11px;
+    letter-spacing: 0.2px;
+  }
+  .nama-kampus strong {
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+  }
+}
 </style>
 <body>
 <div class="logo-kampus">
