@@ -1310,8 +1310,7 @@ document.getElementById("formEvaluasi").addEventListener("submit", function(e) {
   teksEvaluasi = "EVALUASI WEBSITE E-KB PASCA SALIN\n";
 
   const jawaban = {};
-
-  for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 5; i++) {
     const nilai = data.get("q" + i) || "-";
     teksEvaluasi += "Pertanyaan " + i + ": " + nilai + "\n";
     jawaban["Pertanyaan " + i] = nilai;
