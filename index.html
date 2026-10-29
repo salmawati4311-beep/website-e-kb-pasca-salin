@@ -852,6 +852,31 @@ footer p {
     object-fit: contain !important;
   }
 }
+  /* Posisi logo dan nama STIKES khusus laptop */
+@media screen and (min-width: 601px) {
+  .logo-kampus {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .logo-kampus img {
+    display: block !important;
+    width: 55px !important;
+    height: 55px !important;
+    flex: 0 0 55px !important;
+    object-fit: contain !important;
+  }
+
+  .logo-kampus .nama-kampus {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    transform: none !important;
+  }
+}
 </style>
 <body>
 <div class="logo-kampus"> 
