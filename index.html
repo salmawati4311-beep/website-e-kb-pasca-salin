@@ -845,6 +845,39 @@ footer p {
     white-space: nowrap !important;
   }
 }
+  /* Perbaikan ukuran logo kampus di laptop */
+@media screen and (min-width: 601px) {
+  body .logo-kampus {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  body .logo-kampus img[src="images/logo-stikes-transparan.png"] {
+    width: 65px !important;
+    height: 65px !important;
+    max-width: 65px !important;
+    min-width: 65px !important;
+    object-fit: contain !important;
+    flex: 0 0 65px !important;
+  }
+
+  body .logo-kampus .nama-kampus {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    transform: none !important;
+  }
+
+  body .logo-kampus .nama-kampus span {
+    font-size: 11px !important;
+  }
+
+  body .logo-kampus .nama-kampus strong {
+    font-size: 15px !important;
+  }
+}
 </style>
 <body>
 <div class="logo-kampus">
