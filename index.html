@@ -813,23 +813,47 @@ footer p {
   flex-shrink: 0 !important;
   margin-top: 3px !important;
 }
-/* Khusus laptop: menyesuaikan tampilan logo kampus */
+/* Perbaikan header khusus laptop */
 @media screen and (min-width: 601px) {
+  .logo-kampus {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    padding: 12px !important;
+  }
+
   .logo-kampus img {
+    display: block !important;
     width: 55px !important;
     height: 55px !important;
     max-width: 55px !important;
+    flex: 0 0 55px !important;
+    object-fit: contain !important;
   }
+
+  .nama-kampus {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
+    transform: none !important;
+  }
+
   .nama-kampus span {
     font-size: 11px !important;
     letter-spacing: 0.2px !important;
+    white-space: nowrap !important;
   }
+
   .nama-kampus strong {
     font-size: 15px !important;
-    letter-spacing: -0.3px !important;
     line-height: 1.3 !important;
+    letter-spacing: -0.3px !important;
+    white-space: nowrap !important;
   }
-}  
+}
 </style>
 <body>
 <div class="logo-kampus">
