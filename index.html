@@ -1118,15 +1118,7 @@ footer p {
       <label><input type="radio" name="q4" value="Membantu"> Membantu</label>
       <label><input type="radio" name="q4" value="Belum membantu"> Belum membantu</label>
     </fieldset>
-
-<fieldset>
-  <legend>5. Secara keseluruhan, bagaimana penilaian Bunda terhadap website E-KB PASCA SALIN?</legend>
-  <label><input type="radio" name="q5" value="Sangat membantu" required> Sangat membantu</label>
-  <label><input type="radio" name="q5" value="Membantu"> Membantu</label>
-  <label><input type="radio" name="q5" value="Kurang membantu"> Kurang membantu</label>
-</fieldset>
-
-
+    
     <fieldset><legend>5. Saran untuk website</legend>
       <textarea id="saran" placeholder="Apa yang Bunda sukai atau ingin diperbaiki?"></textarea>
     </fieldset>
@@ -1318,7 +1310,7 @@ document.getElementById("formEvaluasi").addEventListener("submit", function(e) {
   teksEvaluasi = "EVALUASI WEBSITE E-KB PASCA SALIN\n";
 
   const jawaban = {};
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 4; i++) {
     const nilai = data.get("q" + i) || "-";
     teksEvaluasi += "Pertanyaan " + i + ": " + nilai + "\n";
     jawaban["Pertanyaan " + i] = nilai;
