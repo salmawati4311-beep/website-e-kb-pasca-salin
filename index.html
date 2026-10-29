@@ -804,7 +804,7 @@ footer p {
   flex-shrink: 0 !important;
   margin-top: 3px !important;
 }
-/* Perbaikan header khusus laptop */
+/* Perbaikan logo kampus khusus laptop */
 @media screen and (min-width: 601px) {
   .logo-kampus {
     display: flex !important;
@@ -820,62 +820,25 @@ footer p {
     width: 55px !important;
     height: 55px !important;
     max-width: 55px !important;
+    min-width: 55px !important;
     flex: 0 0 55px !important;
     object-fit: contain !important;
   }
 
-  .nama-kampus {
+  .logo-kampus .nama-kampus {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 5px !important;
     transform: none !important;
   }
 
-  .nama-kampus span {
+  .logo-kampus .nama-kampus span {
     font-size: 11px !important;
-    letter-spacing: 0.2px !important;
-    white-space: nowrap !important;
   }
 
-  .nama-kampus strong {
+  .logo-kampus .nama-kampus strong {
     font-size: 15px !important;
     line-height: 1.3 !important;
-    letter-spacing: -0.3px !important;
-    white-space: nowrap !important;
-  }
-}
-  /* Perbaikan ukuran logo kampus di laptop */
-@media screen and (min-width: 601px) {
-  body .logo-kampus {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-  }
-
-  body .logo-kampus img[src="images/logo-stikes-transparan.png"] {
-    width: 65px !important;
-    height: 65px !important;
-    max-width: 65px !important;
-    min-width: 65px !important;
-    object-fit: contain !important;
-    flex: 0 0 65px !important;
-  }
-
-  body .logo-kampus .nama-kampus {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    transform: none !important;
-  }
-
-  body .logo-kampus .nama-kampus span {
-    font-size: 11px !important;
-  }
-
-  body .logo-kampus .nama-kampus strong {
-    font-size: 15px !important;
   }
 }
 </style>
